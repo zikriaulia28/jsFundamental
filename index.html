@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Tugas Week 2</title>
+</head>
+
+<body>
+  <section class="container">
+    <div class="dropdown-wrapper">
+      <h1>Tugas Week 2</h1>
+      <select class="dropdown" id="dropdown">
+        <option>Select Option</option>
+        <option value="value5">Algoritma & Flowchart</option>
+        <option value="value1">Biodata</option>
+        <option value="value2">Nilai Rata-rata</option>
+        <option value="value3">Menentukan Palindrome</option>
+        <option value="value4">Mengubah Huruf Consonant</option>
+      </select>
+    </div>
+    <div id="flowchart" class="flowchart">
+      <div class="scroll">
+        <img src="./assets/palindrome.jpg">
+        <img src="./assets/konsonan.webp">
+      </div>
+    </div>
+    <div class="biodata" id="biodata">
+      <h1>Biodata</h1>
+      <ul>
+        <li>Nama : <span id="name"></span></li>
+        <li>Age : <span id="age"></span></li>
+        <li>Hobbies : <span id="hobbies"></span></li>
+        <li>Is Married : <span id="isMarried"></span> </li>
+        <div class="flex">
+          <li>School List : <span id="schoolList"></span></li>
+          <li>Skills : <span id="skills"></span></li>
+        </div>
+        <li>Interst In Coding : <span id="interst"></span></li>
+      </ul>
+      <div class="btn">
+        <button id="resultBiodata" class="pointer">Click Me</button>
+        <button id="resetBiodata" class="pointer">Reset</button>
+      </div>
+    </div>
+    <div class="palindrome" id="palindrome">
+      <form onsubmit="event.preventDefault();">
+        <h1>Check Palindrome </h1>
+        <div class="input-form">
+          <input type="text" id="input-string" autocomplete="off" />
+          <button id="check-button" type="submit" class="pointer">Check</button>
+          <button type="reset" id="resetBtn" class="pointer">Reset</button>
+          <p id="result"></p>
+        </div>
+      </form>
+    </div>
+    <div class="average" id="average">
+      <form onsubmit="event.preventDefault();">
+        <h1>Hitung Rata-rata UN</h1>
+        <div class="form">
+          <div class="input-form">
+            <label for="bahasaIndonesia">Bahasa Indonesia: </label>
+            <input type="text" id="bahasaIndonesia">
+          </div>
+          <div class="input-form">
+            <label for="bahasaInggris">Bahasa Inggris: </label>
+            <input type="text" id="bahasaInggris">
+          </div>
+          <div class="input-form">
+            <label for="matematika">Matematika: </label>
+            <input type="text" id="matematika">
+          </div>
+          <div class="input-form">
+            <label for="IPA">IPA: </label>
+            <input type="text" id="IPA">
+          </div>
+          <div class="input-form">
+            <button type="submit" onclick="hitungRataRata()" class="pointer">Hitung</button>
+            <button type="reset" id="resetAverage" class="pointer">Reset</button>
+            <p id="rataRata"></p>
+            <p id="grade"></p>
+          </div>
+        </div>
+      </form>
+    </div>
+    <div class="consonant" id="consonant">
+      <form onsubmit="event.preventDefault();">
+        <h1>Consonant</h1>
+        <div class="input-form">
+          <input id="inputText" type="text" autocomplete="off">
+          <button id="changeConsonant" type="submit" class="pointer">Submit</button>
+          <button type="reset" id="resetAgain" class="pointer">Reset</button>
+          <p id="resultCons"></p>
+        </div>
+      </form>
+    </div>
+  </section>
+</body>
+<script src="./main.js"></script>
+
+</html>
